@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище ProjectForSinapticModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Authentitation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameClient" Type="nvarchar(max)" />
+          <Property Name="Company" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="PriceList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectСomplexity" Type="nvarchar(max)" />
+          <Property Name="Price" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ProjectAccounting">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUser" Type="int" />
+          <Property Name="IDPrice" Type="int" />
+          <Property Name="IDType" Type="int" />
+          <Property Name="IDClient" Type="int" />
+          <Property Name="IDProject" Type="int" />
+          <Property Name="Status" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Projects">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameProject" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TypeProject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameTypeProject" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="MiddleName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Position" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="ProjectAccounting_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_PriceList">
+          <End Role="PriceList" Type="Self.PriceList" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PriceList">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDPrice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_Projects">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDProject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_TypeProject1">
+          <End Role="TypeProject" Type="Self.TypeProject" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeProject">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище ProjectForSinapticModelContainer">
+          <EntitySet Name="Authentitation" EntityType="Self.Authentitation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PriceList" EntityType="Self.PriceList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectAccounting" EntityType="Self.ProjectAccounting" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeProject" EntityType="Self.TypeProject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="ProjectAccounting_Clients" Association="Self.ProjectAccounting_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_PriceList" Association="Self.ProjectAccounting_PriceList">
+            <End Role="PriceList" EntitySet="PriceList" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_Projects" Association="Self.ProjectAccounting_Projects">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_TypeProject1" Association="Self.ProjectAccounting_TypeProject1">
+            <End Role="TypeProject" EntitySet="TypeProject" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_Users" Association="Self.ProjectAccounting_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProjectForSinapticModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Authentitation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameClient" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProjectAccounting" Relationship="Self.ProjectAccounting_Clients" FromRole="Clients" ToRole="ProjectAccounting" />
+        </EntityType>
+        <EntityType Name="PriceList">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectСomplexity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProjectAccounting" Relationship="Self.ProjectAccounting_PriceList" FromRole="PriceList" ToRole="ProjectAccounting" />
+        </EntityType>
+        <EntityType Name="ProjectAccounting">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUser" Type="Int32" />
+          <Property Name="IDPrice" Type="Int32" />
+          <Property Name="IDType" Type="Int32" />
+          <Property Name="IDClient" Type="Int32" />
+          <Property Name="IDProject" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Clients" Relationship="Self.ProjectAccounting_Clients" FromRole="ProjectAccounting" ToRole="Clients" />
+          <NavigationProperty Name="PriceList" Relationship="Self.ProjectAccounting_PriceList" FromRole="ProjectAccounting" ToRole="PriceList" />
+          <NavigationProperty Name="Projects" Relationship="Self.ProjectAccounting_Projects" FromRole="ProjectAccounting" ToRole="Projects" />
+          <NavigationProperty Name="TypeProject" Relationship="Self.ProjectAccounting_TypeProject1" FromRole="ProjectAccounting" ToRole="TypeProject" />
+          <NavigationProperty Name="Users" Relationship="Self.ProjectAccounting_Users" FromRole="ProjectAccounting" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Projects">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameProject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProjectAccounting" Relationship="Self.ProjectAccounting_Projects" FromRole="Projects" ToRole="ProjectAccounting" />
+        </EntityType>
+        <EntityType Name="TypeProject">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameTypeProject" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProjectAccounting" Relationship="Self.ProjectAccounting_TypeProject1" FromRole="TypeProject" ToRole="ProjectAccounting" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProjectAccounting" Relationship="Self.ProjectAccounting_Users" FromRole="Users" ToRole="ProjectAccounting" />
+        </EntityType>
+        <Association Name="ProjectAccounting_Clients">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clients">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDClient" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_PriceList">
+          <End Role="PriceList" Type="Self.PriceList" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PriceList">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDPrice" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_Projects">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDProject" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_TypeProject1">
+          <End Role="TypeProject" Type="Self.TypeProject" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeProject">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ProjectAccounting_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="ProjectAccounting" Type="Self.ProjectAccounting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ProjectAccounting">
+              <PropertyRef Name="IDUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProjectForSinapticEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Authentitation" EntityType="Self.Authentitation" />
+          <EntitySet Name="Clients" EntityType="Self.Clients" />
+          <EntitySet Name="PriceList" EntityType="Self.PriceList" />
+          <EntitySet Name="ProjectAccounting" EntityType="Self.ProjectAccounting" />
+          <EntitySet Name="Projects" EntityType="Self.Projects" />
+          <EntitySet Name="TypeProject" EntityType="Self.TypeProject" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="ProjectAccounting_Clients" Association="Self.ProjectAccounting_Clients">
+            <End Role="Clients" EntitySet="Clients" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_PriceList" Association="Self.ProjectAccounting_PriceList">
+            <End Role="PriceList" EntitySet="PriceList" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_Projects" Association="Self.ProjectAccounting_Projects">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_TypeProject1" Association="Self.ProjectAccounting_TypeProject1">
+            <End Role="TypeProject" EntitySet="TypeProject" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+          <AssociationSet Name="ProjectAccounting_Users" Association="Self.ProjectAccounting_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ProjectAccounting" EntitySet="ProjectAccounting" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ProjectForSinapticModelContainer" CdmEntityContainer="ProjectForSinapticEntities">
+          <EntitySetMapping Name="Authentitation">
+            <EntityTypeMapping TypeName="ProjectForSinapticModel.Authentitation">
+              <MappingFragment StoreEntitySet="Authentitation">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="ProjectForSinapticModel.Clients">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameClient" ColumnName="NameClient" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PriceList">
+            <EntityTypeMapping TypeName="ProjectForSinapticModel.PriceList">
+              <MappingFragment StoreEntitySet="PriceList">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProjectСomplexity" ColumnName="ProjectСomplexity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectAccounting">
+            <EntityTypeMapping TypeName="ProjectForSinapticModel.ProjectAccounting">
+              <MappingFragment StoreEntitySet="ProjectAccounting">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="IDPrice" ColumnName="IDPrice" />
+                <ScalarProperty Name="IDType" ColumnName="IDType" />
+                <ScalarProperty Name="IDClient" ColumnName="IDClient" />
+                <ScalarProperty Name="IDProject" ColumnName="IDProject" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="ProjectForSinapticModel.Projects">
+              <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameProject" ColumnName="NameProject" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeProject">
+            <EntityTypeMapping TypeName="ProjectForSinapticModel.TypeProject">
+              <MappingFragment StoreEntitySet="TypeProject">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NameTypeProject" ColumnName="NameTypeProject" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="ProjectForSinapticModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
