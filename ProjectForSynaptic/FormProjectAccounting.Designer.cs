@@ -111,7 +111,7 @@
             // 
             this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.SpinButton;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(297, 12);
+            this.label1.Location = new System.Drawing.Point(252, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 24;
@@ -120,7 +120,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(528, 12);
+            this.label2.Location = new System.Drawing.Point(516, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 25;
@@ -138,7 +138,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1005, 12);
+            this.label4.Location = new System.Drawing.Point(1016, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 13);
             this.label4.TabIndex = 27;
@@ -147,7 +147,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1279, 12);
+            this.label5.Location = new System.Drawing.Point(1262, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 28;
@@ -155,118 +155,140 @@
             // 
             // buttonEdit1
             // 
+            this.buttonEdit1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEdit1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit1.Location = new System.Drawing.Point(255, 332);
             this.buttonEdit1.Name = "buttonEdit1";
             this.buttonEdit1.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit1.TabIndex = 29;
             this.buttonEdit1.Text = "Изменить";
-            this.buttonEdit1.UseVisualStyleBackColor = true;
+            this.buttonEdit1.UseVisualStyleBackColor = false;
             this.buttonEdit1.Click += new System.EventHandler(this.buttonEdit1_Click);
             // 
             // buttonReady1
             // 
+            this.buttonReady1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonReady1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonReady1.Location = new System.Drawing.Point(255, 361);
             this.buttonReady1.Name = "buttonReady1";
             this.buttonReady1.Size = new System.Drawing.Size(75, 23);
             this.buttonReady1.TabIndex = 30;
             this.buttonReady1.Text = "Выполнено";
-            this.buttonReady1.UseVisualStyleBackColor = true;
+            this.buttonReady1.UseVisualStyleBackColor = false;
             this.buttonReady1.Click += new System.EventHandler(this.buttonReady1_Click);
             // 
             // buttonEdit2
             // 
+            this.buttonEdit2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEdit2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit2.Location = new System.Drawing.Point(519, 332);
             this.buttonEdit2.Name = "buttonEdit2";
             this.buttonEdit2.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit2.TabIndex = 31;
             this.buttonEdit2.Text = "Изменить";
-            this.buttonEdit2.UseVisualStyleBackColor = true;
+            this.buttonEdit2.UseVisualStyleBackColor = false;
             this.buttonEdit2.Click += new System.EventHandler(this.buttonEdit2_Click);
             // 
             // buttonReady2
             // 
+            this.buttonReady2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonReady2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonReady2.Location = new System.Drawing.Point(519, 361);
             this.buttonReady2.Name = "buttonReady2";
             this.buttonReady2.Size = new System.Drawing.Size(75, 23);
             this.buttonReady2.TabIndex = 32;
             this.buttonReady2.Text = "Выполнено";
-            this.buttonReady2.UseVisualStyleBackColor = true;
+            this.buttonReady2.UseVisualStyleBackColor = false;
             this.buttonReady2.Click += new System.EventHandler(this.buttonReady2_Click);
             // 
             // buttonEdit3
             // 
+            this.buttonEdit3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEdit3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit3.Location = new System.Drawing.Point(764, 332);
             this.buttonEdit3.Name = "buttonEdit3";
             this.buttonEdit3.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit3.TabIndex = 33;
             this.buttonEdit3.Text = "Изменить";
-            this.buttonEdit3.UseVisualStyleBackColor = true;
+            this.buttonEdit3.UseVisualStyleBackColor = false;
             this.buttonEdit3.Click += new System.EventHandler(this.buttonEdit3_Click);
             // 
             // buttonReady3
             // 
+            this.buttonReady3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonReady3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonReady3.Location = new System.Drawing.Point(764, 361);
             this.buttonReady3.Name = "buttonReady3";
             this.buttonReady3.Size = new System.Drawing.Size(75, 23);
             this.buttonReady3.TabIndex = 34;
             this.buttonReady3.Text = "Выполнено";
-            this.buttonReady3.UseVisualStyleBackColor = true;
+            this.buttonReady3.UseVisualStyleBackColor = false;
             this.buttonReady3.Click += new System.EventHandler(this.buttonReady3_Click);
             // 
             // buttonEdit4
             // 
+            this.buttonEdit4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEdit4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit4.Location = new System.Drawing.Point(1019, 332);
             this.buttonEdit4.Name = "buttonEdit4";
             this.buttonEdit4.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit4.TabIndex = 35;
             this.buttonEdit4.Text = "Изменить";
-            this.buttonEdit4.UseVisualStyleBackColor = true;
+            this.buttonEdit4.UseVisualStyleBackColor = false;
             this.buttonEdit4.Click += new System.EventHandler(this.buttonEdit4_Click);
             // 
             // buttonReady4
             // 
+            this.buttonReady4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonReady4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonReady4.Location = new System.Drawing.Point(1019, 361);
             this.buttonReady4.Name = "buttonReady4";
             this.buttonReady4.Size = new System.Drawing.Size(75, 23);
             this.buttonReady4.TabIndex = 36;
             this.buttonReady4.Text = "Выполнено";
-            this.buttonReady4.UseVisualStyleBackColor = true;
+            this.buttonReady4.UseVisualStyleBackColor = false;
             this.buttonReady4.Click += new System.EventHandler(this.buttonReady4_Click);
             // 
             // buttonEdit5
             // 
+            this.buttonEdit5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEdit5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonEdit5.Location = new System.Drawing.Point(1265, 332);
             this.buttonEdit5.Name = "buttonEdit5";
             this.buttonEdit5.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit5.TabIndex = 37;
             this.buttonEdit5.Text = "Изменить";
-            this.buttonEdit5.UseVisualStyleBackColor = true;
+            this.buttonEdit5.UseVisualStyleBackColor = false;
             this.buttonEdit5.Click += new System.EventHandler(this.buttonEdit5_Click);
             // 
             // buttonDel
             // 
+            this.buttonDel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDel.Location = new System.Drawing.Point(1265, 361);
             this.buttonDel.Name = "buttonDel";
             this.buttonDel.Size = new System.Drawing.Size(75, 23);
             this.buttonDel.TabIndex = 38;
             this.buttonDel.Text = "Удалить";
-            this.buttonDel.UseVisualStyleBackColor = true;
+            this.buttonDel.UseVisualStyleBackColor = false;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
             // buttonMenu
             // 
-            this.buttonMenu.Location = new System.Drawing.Point(32, 351);
+            this.buttonMenu.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonMenu.Location = new System.Drawing.Point(38, 361);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(114, 23);
             this.buttonMenu.TabIndex = 41;
             this.buttonMenu.Text = "Меню";
-            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.UseVisualStyleBackColor = false;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // comboBoxProjects
             // 
             this.comboBoxProjects.FormattingEnabled = true;
-            this.comboBoxProjects.Location = new System.Drawing.Point(15, 91);
+            this.comboBoxProjects.Location = new System.Drawing.Point(13, 101);
             this.comboBoxProjects.Name = "comboBoxProjects";
             this.comboBoxProjects.Size = new System.Drawing.Size(157, 21);
             this.comboBoxProjects.TabIndex = 42;
@@ -274,7 +296,7 @@
             // comboBoxUsers
             // 
             this.comboBoxUsers.FormattingEnabled = true;
-            this.comboBoxUsers.Location = new System.Drawing.Point(15, 211);
+            this.comboBoxUsers.Location = new System.Drawing.Point(13, 221);
             this.comboBoxUsers.Name = "comboBoxUsers";
             this.comboBoxUsers.Size = new System.Drawing.Size(157, 21);
             this.comboBoxUsers.TabIndex = 43;
@@ -282,7 +304,7 @@
             // comboBoxPrice
             // 
             this.comboBoxPrice.FormattingEnabled = true;
-            this.comboBoxPrice.Location = new System.Drawing.Point(15, 255);
+            this.comboBoxPrice.Location = new System.Drawing.Point(13, 265);
             this.comboBoxPrice.Name = "comboBoxPrice";
             this.comboBoxPrice.Size = new System.Drawing.Size(157, 21);
             this.comboBoxPrice.TabIndex = 44;
@@ -290,7 +312,7 @@
             // comboBoxType
             // 
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(15, 171);
+            this.comboBoxType.Location = new System.Drawing.Point(13, 181);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(157, 21);
             this.comboBoxType.TabIndex = 45;
@@ -298,7 +320,7 @@
             // comboBoxClient
             // 
             this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(15, 131);
+            this.comboBoxClient.Location = new System.Drawing.Point(13, 141);
             this.comboBoxClient.Name = "comboBoxClient";
             this.comboBoxClient.Size = new System.Drawing.Size(157, 21);
             this.comboBoxClient.TabIndex = 46;
@@ -306,7 +328,7 @@
             // Label6
             // 
             this.Label6.AutoSize = true;
-            this.Label6.Location = new System.Drawing.Point(12, 75);
+            this.Label6.Location = new System.Drawing.Point(10, 85);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(101, 13);
             this.Label6.TabIndex = 47;
@@ -315,7 +337,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 195);
+            this.label7.Location = new System.Drawing.Point(10, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 48;
@@ -324,7 +346,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 235);
+            this.label8.Location = new System.Drawing.Point(10, 245);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(33, 13);
             this.label8.TabIndex = 49;
@@ -333,7 +355,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 155);
+            this.label9.Location = new System.Drawing.Point(10, 165);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 50;
@@ -342,7 +364,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 115);
+            this.label10.Location = new System.Drawing.Point(10, 125);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 51;
@@ -575,12 +597,14 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(32, 322);
+            this.buttonAdd.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAdd.Location = new System.Drawing.Point(38, 332);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(114, 23);
             this.buttonAdd.TabIndex = 58;
             this.buttonAdd.Text = "Добавить проект";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // comboBoxStatus
@@ -592,7 +616,7 @@
             "Review",
             "Testing",
             "Ready"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(17, 295);
+            this.comboBoxStatus.Location = new System.Drawing.Point(15, 305);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(160, 21);
             this.comboBoxStatus.TabIndex = 59;
@@ -600,7 +624,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(14, 279);
+            this.label11.Location = new System.Drawing.Point(12, 289);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 13);
             this.label11.TabIndex = 60;
@@ -610,6 +634,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1434, 404);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBoxStatus);
@@ -646,8 +671,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1450, 443);
+            this.MinimumSize = new System.Drawing.Size(1450, 443);
             this.Name = "FormProjectAccounting";
-            this.Text = "FormProjectAccounting";
+            this.Opacity = 0.9D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Учет проектов";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
