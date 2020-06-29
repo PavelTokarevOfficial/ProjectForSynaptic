@@ -181,7 +181,7 @@
             // 
             this.buttonEdit2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonEdit2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonEdit2.Location = new System.Drawing.Point(519, 332);
+            this.buttonEdit2.Location = new System.Drawing.Point(519, 334);
             this.buttonEdit2.Name = "buttonEdit2";
             this.buttonEdit2.Size = new System.Drawing.Size(75, 23);
             this.buttonEdit2.TabIndex = 31;
@@ -193,7 +193,7 @@
             // 
             this.buttonReady2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonReady2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonReady2.Location = new System.Drawing.Point(519, 361);
+            this.buttonReady2.Location = new System.Drawing.Point(519, 363);
             this.buttonReady2.Name = "buttonReady2";
             this.buttonReady2.Size = new System.Drawing.Size(75, 23);
             this.buttonReady2.TabIndex = 32;
@@ -618,7 +618,7 @@
             "Ready"});
             this.comboBoxStatus.Location = new System.Drawing.Point(15, 305);
             this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(160, 21);
+            this.comboBoxStatus.Size = new System.Drawing.Size(155, 21);
             this.comboBoxStatus.TabIndex = 59;
             // 
             // label11
@@ -636,6 +636,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1434, 404);
+            this.Controls.Add(this.listViewNewChallenge);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.buttonAdd);
@@ -643,7 +644,6 @@
             this.Controls.Add(this.listViewTesting);
             this.Controls.Add(this.listViewReview);
             this.Controls.Add(this.listViewInWork);
-            this.Controls.Add(this.listViewNewChallenge);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);

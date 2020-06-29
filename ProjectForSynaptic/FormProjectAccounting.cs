@@ -530,5 +530,7 @@ namespace ProjectForSynaptic
                 ShowlistViewReady();
             }
         }
+
+        
     }
 }
